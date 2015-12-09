@@ -1,9 +1,72 @@
 @import reset
 
 body
-
+  font-family: 'Source Sans Pro', sans-serif
+  background-color: #84784A
 .main-img
   width: 100%
 
-.navBar
+nav
   background-color: #A0C6D2
+  display: flex
+  justify-content: space-between
+
+.inline
+  display: inline
+
+.nav
+
+  &-item
+    position: relative
+  &-item-a
+    padding-left: 1em
+    color: #fff
+    padding-right: 1em
+    font-size: 1.5em
+    text-decoration: none
+    padding-top: 1em
+    padding-bottom: 1em
+    &:hover
+      color: #000
+      text-decoration: none
+      background-color: #fff
+    &-hovered
+      color: #000
+      text-decoration: none
+      background-color: #fff
+
+  &-list
+    padding-top: 1em
+    margin-bottom: 1em
+
+.myCustomClass
+  border: none
+  background-color: rgba(0,0,0,0)
+  pointer-events: none
+
+
+.myCustomClass .qtip-content
+  font-size: 3em
+  color: yellow
+  line-height: 1em
+
+.film-sub
+  display: none
+  position: absolute
+  top: 47px
+  left: 3px
+  width: 40vw
+  background: #fff
+  color: #000
+  padding: 1em
+  font-size: 1.2em
+  line-height: 1.1em
+.film-item
+  margin-bottom: 3em
+
+.bold
+  font-weight: 900
+
+
+a:hover > .film-sub
+  display: block
