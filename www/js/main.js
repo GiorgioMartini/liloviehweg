@@ -45,7 +45,8 @@ function addMouseOvers(listOfImgMaps) {
        }else {
          $(className).qtip({
            style: {tip: false, classes: 'myCustomClass'
-         }, prerender: true,
+         },
+         prerender: true, toggle: true,
            content: {
                text: listOfImgMaps[key]
            },
@@ -59,12 +60,22 @@ function addMouseOvers(listOfImgMaps) {
   }
 }
 
-
-
-
-
+setTimeout(function(){
+  $('map').imageMapResize();
+  addMouseOvers(places);
+  console.log('loaded');
+  $( window ).blur();
+  $( window ).trigger('click');
+  }, 3000);
 
 addMouseOvers(places);
+
+
+
+
+
+
+
 
 
 
