@@ -15,6 +15,10 @@ body {
     line-height: 1;
 }
 
+.adjust-height{
+  transform: translateY(-14px);
+}
+
 ol,ul {
     list-style: none;
 }
@@ -39,7 +43,7 @@ table {
 }
 
 body {
-    font-family: 'Source Sans Pro',sans-serif;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     background-color: #84784A;
 }
 
@@ -76,11 +80,35 @@ nav {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-
+.nav-item-a-logo {
+    padding-left: 1em;
+    color: #fff;
+    padding-right: 1em;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.underline{
+  text-decoration: underline;
+}
+.film-item-side{
+width: 100px;
+padding-top: 4em;
+padding-left: 2em;
+}
 .nav-item-a:hover {
     color: #000;
     text-decoration: none;
     background-color: #fff;
+}
+.nav-item-a-logo:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+img{
+  padding-bottom: 1em;
 }
 
 .nav-item-a-hovered {
@@ -93,7 +121,9 @@ nav {
     padding-top: 1em;
     margin-bottom: 1em;
 }
-
+.fluid{
+  width: 100%;
+}
 .myCustomClass {
     border: none;
     background-color: transparent;
@@ -110,30 +140,53 @@ nav {
 .myCustomClass .qtip-content p {
     color: #ff0;
 }
+.film-sub-wrapper{
+  display: flex;
+}
+
+h2{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+p{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 
 .film-sub {
     display: none;
     position: absolute;
-    top: 47px;
+    top: 42px;
     left: 0px;
-    width: 40vw;
+    width: 900px;
     background: #fff;
     color: #000;
-    padding: 1em;
+    padding: 2em;
     font-size: 1.2em;
     line-height: 1.1em;
 }
 
 .film-item {
     margin-bottom: 3em;
+    width: 600px;
+}
+.sublogo{
+  margin-left: 1em;
+}
+.arrow{
+position: absolute;
+top: 70%;
+left: 48%;
+width: 40px;
 }
 
 .garten-sub {
     display: none;
     position: absolute;
-    top: 47px;
+    top: 42px;
     left: 0px;
-    width: 40vw;
+    width: 800px;
     background: #fff;
     color: #000;
     padding: 1em;
@@ -148,7 +201,7 @@ nav {
 .dorf-sub {
     display: none;
     position: absolute;
-    top: 47px;
+    top: 42px;
     left: 0px;
     width: 40vw;
     background: #fff;
@@ -165,7 +218,7 @@ nav {
 .info-sub {
     display: none;
     position: absolute;
-    top: 47px;
+    top: 42px;
     right: 0;
     width: 40vw;
     background: #fff;

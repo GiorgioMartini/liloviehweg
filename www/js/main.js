@@ -2,23 +2,23 @@ $(document).ready(function() {
   $('map').imageMapResize();
 
   var places = {
-    berlin: '<h2>Berlin</h2><p >www.berlin.de</p>',
-    stutzpunkt: '<h2>St&uuml;tzpunkt</h2><p >www.dorfmite.productions/dorf</p>',
-    libken: '<h2>Libken</h2><p >www.libken.de</p>',
+    berlin: '<h2 class="underline">Berlin</h2>',
+    stutzpunkt: '<h2 class="underline">St&uuml;tzpunkt</h2>',
+    libken: '<h2 class="underline">Libken</h2>',
     bushaltesstelle: 'Bushaltesstelle',
     pretty:'Pretty Woman',
     axel: 'Axel',
-    cafe:'<h2>Caf&eacute; zum L&ouml;wen</h2><p >www.dorfmitte.productions/dorf</p>',
-    lindenplatz:'<h2>Lindenplatz</h2><p >www.dorfmitte.productions/dorf</p>',
+    cafe:'<h2 class="underline">Caf&eacute; zum L&ouml;wen</h2>',
+    lindenplatz:'<h2 class="underline">Lindenplatz</h2>',
     kirche:'Kirche',
     doner:'D&ouml;ner Imbiss',
     renate:'Heinrich und Renate',
-    gluundspaene:'Fischmann Micha',
-    gar:'<h2>Schlossg&auml;rtnerei</h2><p >www.dorfmitte.productions/gar</p>',
+    gluundspaene:'<h2 class="underline">Fischmann Micha</h2>',
+    gar:'<h2 class="underline">Schlossg&auml;rtnerei</h2>',
     erna:'Erna und Elli',
-    gewachshaus:'<h2>Gew&auml;chshaus</h2><p >www.dorfmitte.productions/gar</p>',
+    gewachshaus:'<h2 class="underline">Gew&auml;chshaus</h2>',
     nele:'Nele',
-    lola:'<h2>Lola</h2><p >www.dorfmitte.productions/info</p>',
+    lola:'<h2 class="underline">Lola</h2>',
     banhhof:'Banhhof Wilmersdorf',
     trixi:'trixi',
   };
@@ -30,7 +30,7 @@ function addMouseOvers(listOfImgMaps) {
       var className = '.'+ key;
        //alert(className);
 
-       if ($( window ).width() < 900) {
+       if ($( window ).width() < 801) {
          $(className).qtip({
            style: {tip: false, classes: 'myCustomClass'
          },show:{ ready: true },hide: false,
@@ -142,7 +142,16 @@ $('.info-sub').hover(function () {
   }
 );
 
+$('.arrow').velocity({
+    top: "73%"
+}, {
 
+    loop: 6,
+    complete:  function() {
+      $('.arrow').velocity("fadeOut", { delay: 500, duration: 1500 });
+     }
+
+});
 
 
 });
