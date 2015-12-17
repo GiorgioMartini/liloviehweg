@@ -156,12 +156,27 @@ $('.arrow').velocity({
 
 
 $(".menu-sub-item").on("click",function(){
-
-$(this).siblings().toggleClass("show");
-
- //.find(".menu-sub-item-content").toggleClass(".show");
-
+  $(this).siblings().toggleClass("show");
 });
 
+
+$(".stutzpunkt").on("click",function(){
+  $(".dorf-sub").css("display","block");
+});
+$(".cafe").on("click",function(){
+  $(".dorf-sub").css("display","block");
+});
+$(".lindenplatz").on("click",function(){
+  $(".dorf-sub").css("display","block");
+});
+$(".gar").on("click",function(){
+  $(".garten-sub").css("display","block");
+});
+$(".gewachshaus").on("click",function(){
+  $(".garten-sub").css("display","block");
+});
+$(".lola").on("click",function(){
+  $(".info-sub").css("display","block");
+});
 
 });
