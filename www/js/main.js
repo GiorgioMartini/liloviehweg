@@ -63,7 +63,6 @@ function addMouseOvers(listOfImgMaps) {
 setTimeout(function(){
   $('map').imageMapResize();
   addMouseOvers(places);
-  console.log('loaded');
   $( window ).blur();
   $( window ).trigger('click');
   }, 3000);
@@ -91,9 +90,11 @@ $('.film').hover(function () {
 $('.film-sub').hover(function () {
   $('.film-sub').css('display','block');
   $('.film').toggleClass("nav-item-a-hovered");
+
   },function () {
     $('.film-sub').css('display','none');
     $('.film').toggleClass("nav-item-a-hovered");
+
   }
 );
 //menu hover garten
@@ -101,6 +102,7 @@ $('.garten').hover(function () {
   $('.garten-sub').css('display','block');
   },function () {
   $('.garten-sub').css('display','none');
+
   }
 );
 $('.garten-sub').hover(function () {
@@ -143,13 +145,21 @@ $('.info-sub').hover(function () {
 );
 
 $('.arrow').velocity({
-    top: "73%"
+    top: "84%"
 }, {
-
-    loop: 6,
+    loop: 6, duration: 500,
     complete:  function() {
-      $('.arrow').velocity("fadeOut", { delay: 500, duration: 1500 });
+      $('.arrow').velocity("fadeOut", { delay: 500, duration: 1000 });
      }
+});
+
+
+
+$(".menu-sub-item").on("click",function(){
+
+$(this).siblings().toggleClass("show");
+
+ //.find(".menu-sub-item-content").toggleClass(".show");
 
 });
 
