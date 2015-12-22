@@ -92,9 +92,11 @@ $('.film').on("click",function () {
 
 
     if (  $('.film-sub').hasClass("visible") ) {
+      $(".nav-item-a-logo").removeClass("active-logo");
       $('.film-sub').removeClass("visible");
     }else{
       $('.film-sub').addClass("visible");
+      $(".nav-item-a-logo").addClass("active-logo");
     }
 
     $('.garten-sub').removeClass("visible");
@@ -109,8 +111,10 @@ $('.garten').on("click",function () {
 
   if (  $('.garten-sub').hasClass("visible") ) {
     $('.garten-sub').removeClass("visible");
+    $('.nav-item-a-logo').removeClass("active-logo");
   }else{
     $('.garten-sub').addClass("visible");
+    $('.nav-item-a-logo').addClass("active-logo");
   }
   $('.film-sub').removeClass("visible");
   $('.dorf-sub').removeClass("visible");
@@ -121,8 +125,10 @@ $('.garten').on("click",function () {
 $('.dorf').on("click",function () {
   if (  $('.dorf-sub').hasClass("visible") ) {
     $('.dorf-sub').removeClass("visible");
+    $('.nav-item-a-logo').removeClass("active-logo");
   }else{
     $('.dorf-sub').addClass("visible");
+    $('.nav-item-a-logo').addClass("active-logo");
   }
   $('.garten-sub').removeClass("visible");
   $('.film-sub').removeClass("visible");
@@ -133,8 +139,10 @@ $('.dorf').on("click",function () {
 $('.info').on("click",function () {
   if (  $('.info-sub').hasClass("visible") ) {
     $('.info-sub').removeClass("visible");
+    $('.nav-item-a-logo').removeClass("active-logo");
   }else{
     $('.info-sub').addClass("visible");
+    $('.nav-item-a-logo').addClass("active-logo");
   }
   $('.garten-sub').removeClass("visible");
   $('.dorf-sub').removeClass("visible");
