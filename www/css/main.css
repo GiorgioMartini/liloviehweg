@@ -49,9 +49,17 @@ body {
 
 nav {
   background-color: rgba(0, 0, 0, 0);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   letter-spacing: 2px;
   position: fixed;
+}
+
+a:focus, a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 .second-nav-ul{
@@ -76,19 +84,21 @@ nav {
 }
 
 .nav-item-a:hover {
-  text-decoration: none;
   color: #fff;
 }
 .nav-item-a-logo:hover {
     color: #fff;
-    text-decoration: underline;
+}
+
+
+.active-logo{
+  text-decoration: underline !important;
 }
 
 .nav-item-a-logo {
     padding-left: 50px;
     color: #fff;
     padding-right: 123px;
-    text-decoration: underline;
     padding-top: 1em;
     padding-bottom: 1em;
     pointer-events: none;
@@ -114,6 +124,9 @@ img{
 .nav-list {
     padding-top: 35px;
     margin-bottom: 1em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
 }
 .fluid{
@@ -132,6 +145,10 @@ img{
     color: #fff;
     line-height: 1em;
     width: 350px;
+}
+
+.visible{
+  display: block !important;
 }
 
 .myCustomClass .qtip-content p {
@@ -153,7 +170,7 @@ cursor: pointer;
 }
 
 .film-sub {
-    display: none;
+  display: none;
     position: absolute;
     top: 40px;
     left: -55px;
@@ -163,7 +180,7 @@ cursor: pointer;
     padding-left: 55px;
     padding-right: 55px;
     overflow: scroll;
-    height: 85vh;
+    height: 95vh;
     padding-top: 30px;
     text-align: justify;
 
@@ -211,11 +228,17 @@ cursor: pointer;
 
 
 .two-cols{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .col{
-flex: 1;
+-webkit-box-flex: 1;
+-webkit-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
 }
 
 /*::-webkit-scrollbar {
@@ -236,7 +259,7 @@ flex: 1;
   margin-left: 1em;
 }
 .arrow{
-position: absolute;
+position: fixed;
 top: 81%;
 left: 49.3%;
 }
@@ -252,7 +275,7 @@ left: 49.3%;
   padding-left: 55px;
   padding-right: 55px;
   overflow: scroll;
-  height: 85vh;
+  height: 95vh;
   padding-top: 30px;
   text-align: justify;
 }
@@ -272,7 +295,7 @@ left: 49.3%;
   padding-left: 55px;
   padding-right: 55px;
   overflow: scroll;
-  height: 85vh;
+  height: 95vh;
   padding-top: 30px;
   text-align: justify;
 }
@@ -285,14 +308,14 @@ left: 49.3%;
   display: none;
   position: absolute;
   top: 40px;
-  left: -560px;
+  left: -533px;
   width: 650px;
   background: #fff;
   color: #000;
   padding-left: 55px;
   padding-right: 55px;
   overflow: scroll;
-  height: 85vh;
+  height: 95vh;
   padding-top: 30px;
   text-align: justify;
 }

@@ -79,79 +79,82 @@ addMouseOvers(places);
 
 
 
+// if (  $(".garten-sub").hasClass("visible") || $(".dorf-sub").hasClass("visible") || $(".film-sub").hasClass("visible") || $(".info-sub").hasClass("visible") ) {
+//    $("nav-item-a-logo").addClass("active-logo");
+// }else{
+//   $("nav-item-a-logo").removeClass("active-logo");
+// }
 
-//menu hover film
-$('.film').hover(function () {
-  $('.film-sub').css('display','block');
-  },function () {
-  $('.film-sub').css('display','none');
-  }
-);
-$('.film-sub').hover(function () {
-  $('.film-sub').css('display','block');
-  $('.film').toggleClass("nav-item-a-hovered");
 
-  },function () {
-    $('.film-sub').css('display','none');
-    $('.film').toggleClass("nav-item-a-hovered");
 
-  }
-);
-//menu hover garten
-$('.garten').hover(function () {
-  $('.garten-sub').css('display','block');
-  },function () {
-  $('.garten-sub').css('display','none');
+
+$('.film').on("click",function () {
+
+
+    if (  $('.film-sub').hasClass("visible") ) {
+      $('.film-sub').removeClass("visible");
+    }else{
+      $('.film-sub').addClass("visible");
+    }
+
+    $('.garten-sub').removeClass("visible");
+    $('.dorf-sub').removeClass("visible");
+    $('.info-sub').removeClass("visible");
 
   }
 );
-$('.garten-sub').hover(function () {
-  $('.garten-sub').css('display','block');
-  $('.garten').toggleClass("nav-item-a-hovered");
-  },function () {
-    $('.garten-sub').css('display','none');
-    $('.garten').toggleClass("nav-item-a-hovered");
+
+////////////////////////////
+$('.garten').on("click",function () {
+
+  if (  $('.garten-sub').hasClass("visible") ) {
+    $('.garten-sub').removeClass("visible");
+  }else{
+    $('.garten-sub').addClass("visible");
+  }
+  $('.film-sub').removeClass("visible");
+  $('.dorf-sub').removeClass("visible");
+  $('.info-sub').removeClass("visible");
   }
 );
-//menu hover dorf
-$('.dorf').hover(function () {
-  $('.dorf-sub').css('display','block');
-  },function () {
-  $('.dorf-sub').css('display','none');
+////////////////////////////
+$('.dorf').on("click",function () {
+  if (  $('.dorf-sub').hasClass("visible") ) {
+    $('.dorf-sub').removeClass("visible");
+  }else{
+    $('.dorf-sub').addClass("visible");
+  }
+  $('.garten-sub').removeClass("visible");
+  $('.film-sub').removeClass("visible");
+  $('.info-sub').removeClass("visible");
   }
 );
-$('.dorf-sub').hover(function () {
-  $('.dorf-sub').css('display','block');
-  $('.dorf').toggleClass("nav-item-a-hovered");
-  },function () {
-    $('.dorf-sub').css('display','none');
-    $('.dorf').toggleClass("nav-item-a-hovered");
+////////////////////////////
+$('.info').on("click",function () {
+  if (  $('.info-sub').hasClass("visible") ) {
+    $('.info-sub').removeClass("visible");
+  }else{
+    $('.info-sub').addClass("visible");
   }
-);
-//menu hover info
-$('.info').hover(function () {
-  $('.info-sub').css('display','block');
-  },function () {
-  $('.info-sub').css('display','none');
-  }
-);
-$('.info-sub').hover(function () {
-  $('.info-sub').css('display','block');
-  $('.info').toggleClass("nav-item-a-hovered");
-  },function () {
-    $('.info-sub').css('display','none');
-    $('.info').toggleClass("nav-item-a-hovered");
+  $('.garten-sub').removeClass("visible");
+  $('.dorf-sub').removeClass("visible");
+  $('.film-sub').removeClass("visible");
   }
 );
 
-$('.arrow').velocity({
-    top: "84%"
-}, {
-    loop: 6, duration: 500,
-    complete:  function() {
-      $('.arrow').velocity("fadeOut", { delay: 500, duration: 1000 });
-     }
+
+
+
+
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+      $(".arrow").fadeOut();
+   }
 });
+
+
+
+
 
 
 
@@ -161,22 +164,22 @@ $(".menu-sub-item").on("click",function(){
 
 
 $(".stutzpunkt").on("click",function(){
-  $(".dorf-sub").css("display","block");
+  $(".dorf-sub").addClass("visible");
 });
 $(".cafe").on("click",function(){
-  $(".dorf-sub").css("display","block");
+  $(".dorf-sub").addClass("visible");
 });
 $(".lindenplatz").on("click",function(){
-  $(".dorf-sub").css("display","block");
+  $(".dorf-sub").addClass("visible");
 });
 $(".gar").on("click",function(){
-  $(".garten-sub").css("display","block");
+  $(".garten-sub").addClass("visible");
 });
 $(".gewachshaus").on("click",function(){
-  $(".garten-sub").css("display","block");
+  $(".garten-sub").addClass("visible");
 });
 $(".lola").on("click",function(){
-  $(".info-sub").css("display","block");
+  $(".info-sub").addClass("visible");
 });
 
 });
