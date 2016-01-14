@@ -203,9 +203,52 @@ $(".stutzpunkt").on("click",function(){
   $(".dorf-sub").addClass("visible");
 });
 
+
+//////////////////////////////////////////////////////////////////
 $('.film-sub').on('click',function(){
-  // do something to remove underline...
+  if ($(".film-sub:not(.not-underlined)")) {
+    $('.film').addClass('not-underlined');
+  }
 });
+$('.film').on('click',function(){
+  if ( $(".film").hasClass('not-underlined')) {
+    $('.film').removeClass('not-underlined');
+  }
+});
+//////////////////////////
+$('.garten-sub').on('click',function(){
+  if ($(".garten-sub:not(.not-underlined)")) {
+    $('.garten').addClass('not-underlined');
+  }
+});
+$('.garten').on('click',function(){
+  if ( $(".garten").hasClass('not-underlined')) {
+    $('.garten').removeClass('not-underlined');
+  }
+});
+//////////////////////////
+$('.dorf-sub').on('click',function(){
+  if ($(".dorf-sub:not(.not-underlined)")) {
+    $('.dorf').addClass('not-underlined');
+  }
+});
+$('.dorf').on('click',function(){
+  if ( $(".dorf").hasClass('not-underlined')) {
+    $('.dorf').removeClass('not-underlined');
+  }
+});
+//////////////////////////
+$('.info-sub').on('click',function(){
+  if ($(".info-sub:not(.not-underlined)")) {
+    $('.info').addClass('not-underlined');
+  }
+});
+$('.info').on('click',function(){
+  if ( $(".info").hasClass('not-underlined')) {
+    $('.info').removeClass('not-underlined');
+  }
+});
+
 
 
 $(".cafe").on("click",function(){
