@@ -99,9 +99,9 @@ a:focus, a:hover {
     padding-left: 50px;
     color: #fff;
     padding-right: 123px;
-    padding-top: 1em;
+    /*padding-top: 1em;*/
     padding-bottom: 1em;
-    pointer-events: none;
+
 }
 .underline{
   text-decoration: underline;
@@ -180,7 +180,7 @@ cursor: pointer;
     padding-left: 55px;
     padding-right: 55px;
     overflow: scroll;
-    height: 95vh;
+    height: 89vh;
     padding-top: 30px;
     text-align: justify;
 
@@ -275,7 +275,7 @@ left: 49.3%;
   padding-left: 55px;
   padding-right: 55px;
   overflow: scroll;
-  height: 95vh;
+  height: 89vh;
   padding-top: 30px;
   text-align: justify;
 }
@@ -288,14 +288,14 @@ left: 49.3%;
   display: none;
   position: absolute;
   top: 40px;
-  left: -255px;
+  left: -256px;
   width: 650px;
   background: #fff;
   color: #000;
   padding-left: 55px;
   padding-right: 55px;
   overflow: scroll;
-  height: 95vh;
+  height: 89vh;
   padding-top: 30px;
   text-align: justify;
 }
@@ -308,14 +308,14 @@ left: 49.3%;
   display: none;
   position: absolute;
   top: 40px;
-  left: -533px;
+  left: -535px;
   width: 650px;
   background: #fff;
   color: #000;
   padding-left: 55px;
   padding-right: 55px;
   overflow: scroll;
-  height: 95vh;
+  height: 89vh;
   padding-top: 30px;
   text-align: justify;
 }
