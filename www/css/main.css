@@ -151,6 +151,10 @@ img{
   display: block !important;
 }
 
+.very-high{
+	line-height: 1.5em;
+}
+
 .myCustomClass .qtip-content p {
     color: #ff0;
 }
