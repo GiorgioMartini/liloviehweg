@@ -200,8 +200,66 @@ $(".menu-sub-item").on("click",function(){
 
 
 $(".stutzpunkt").on("click",function(){
+  $(".dorf").addClass("not-underlined");
   $(".dorf-sub").addClass("visible");
 });
+
+
+$(".lindenplatz").on("click",function(){
+
+  if ($(".dorf").hasClass("not-underlined") && $(".dorf-sub").hasClass("visible")) {
+    $(".dorf").removeClass("not-underlined");
+    $(".dorf-sub").removeClass("visible");
+  }else {
+    $(".dorf").addClass("not-underlined");
+    $(".dorf-sub").addClass("visible");
+  }
+
+});
+
+
+//DISABLE SCROLLING BG
+
+$('.film-sub, .dorf-sub, .garten-sub, .info-sub').on('scroll', function() {
+        if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+
+          // var lastScrollTop = 0;
+          // $(this).scroll(function(event){
+          //    var st = $(this).scrollTop();
+          //    if (st > lastScrollTop){
+          //        console.log('scrolling down');
+          //    } else {
+          //       console.log('scrolling up');
+          //    }
+          //    lastScrollTop = st;
+          // });
+
+        }
+    });
+
+
+
+
+
+///////////////////////
+
+
+
+
+
+
+$(".cafe").on("click",function(){
+
+  if ($(".dorf").hasClass("not-underlined") && $(".dorf-sub").hasClass("visible")) {
+    $(".dorf").removeClass("not-underlined");
+    $(".dorf-sub").removeClass("visible");
+  }else {
+    $(".dorf").addClass("not-underlined");
+    $(".dorf-sub").addClass("visible");
+  }
+
+});
+
 
 
 //////////////////////////////////////////////////////////////////
@@ -243,6 +301,7 @@ $('.info-sub').on('click',function(){
     $('.info').addClass('not-underlined');
   }
 });
+
 $('.info').on('click',function(){
   if ( $(".info").hasClass('not-underlined')) {
     $('.info').removeClass('not-underlined');
@@ -251,9 +310,10 @@ $('.info').on('click',function(){
 
 
 
-$(".cafe").on("click",function(){
-  $(".dorf-sub").addClass("visible");
-});
+
+
+
+
 $(".lindenplatz").on("click",function(){
   $(".dorf-sub").addClass("visible");
 });

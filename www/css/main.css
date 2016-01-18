@@ -12,6 +12,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 
 h2{
   font-weight: bolder;
+  padding-bottom: 1em;
 }
 
 ol,ul {
@@ -47,6 +48,19 @@ body {
     width: 100%;
 }
 
+a{
+  text-decoration: underline;
+}
+
+.whiteboxlinks:hover{
+  color: #222222;
+  margin-bottom: 0.5em;
+}
+.whiteboxlinks {
+margin-bottom: 1em;
+
+}
+
 nav {
   background-color: rgba(0, 0, 0, 0);
   display: -webkit-box;
@@ -58,8 +72,9 @@ nav {
 }
 
 a:focus, a:hover {
-    color: #fff;
+    color: #000;
     text-decoration: none;
+
 }
 
 .second-nav-ul{
@@ -76,6 +91,13 @@ a:focus, a:hover {
 }
 
 .nav-item-a {
+    color: #fff;
+    padding-right: 55px;
+    padding-bottom: 3em;
+    text-decoration: underline;
+
+}
+.nav-item-a:focus {
     color: #fff;
     padding-right: 55px;
     padding-bottom: 3em;
