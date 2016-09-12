@@ -6,6 +6,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     vertical-align: baseline;
 }
 
+a:focus {
+   outline: 0;
+}
+
+
+
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display: block;
 }
@@ -72,7 +78,7 @@ nav {
 }
 
 a:focus, a:hover {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 
 }
@@ -294,7 +300,7 @@ left: 49.3%;
   display: none;
   position: absolute;
   top: 40px;
-  left: -143px;
+  left: -140px;
   width: 650px;
   background: #fff;
   color: #000;
@@ -314,7 +320,7 @@ left: 49.3%;
   display: none;
   position: absolute;
   top: 40px;
-  left: -256px;
+  left: -249px;
   width: 650px;
   background: #fff;
   color: #000;
@@ -338,7 +344,7 @@ left: 49.3%;
   display: none;
   position: absolute;
   top: 40px;
-  left: -535px;
+  left: -522px;
   width: 650px;
   background: #fff;
   color: #000;
