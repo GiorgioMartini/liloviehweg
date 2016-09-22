@@ -328,3 +328,13 @@ $(".lola").on("click",function(){
 });
 
 });
+
+$(window).click(function() {
+
+  if (   $(".film-sub").hasClass('visible') ||  $(".garten-sub").hasClass('visible') ||   $(".dorf-sub").hasClass('visible') ||  $(".info-sub").hasClass('visible') ) {
+     $(".nav-item-a-logo").removeClass('active-logo').css('text-decoration','none');
+  }else if ( $(".film-sub").hasClass('visible') === false ||  $(".garten-sub").hasClass('visible') === false ||   $(".dorf-sub").hasClass('visible') === false ||  $(".info-sub").hasClass('visible') === false) {
+     $(".nav-item-a-logo").removeClass('active-logo').css('text-decoration','underline');
+  }
+
+});
