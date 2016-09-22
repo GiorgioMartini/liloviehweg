@@ -10,7 +10,9 @@ a:focus {
    outline: 0;
 }
 
-
+img{
+  padding-bottom: 10px;
+}
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display: block;
@@ -93,7 +95,7 @@ a:focus, a:hover {
 }
 
 .nav-item {
-    position: relative;
+    /*position: relative;*/
 }
 
 .nav-item-a {
@@ -141,9 +143,7 @@ padding-left: 2em;
 }
 
 
-img{
-  padding-bottom: 1em;
-}
+
 
 .nav-item-a-hovered {
     text-decoration: none;
@@ -191,10 +191,14 @@ img{
 
 .menu-sub-item-content{
   display: none;
-
+  img{
+    margin-top: 10px;
+    padding-bottom: 10px ;
+  }
 }
 .menu-sub-item{
 cursor: pointer;
+padding-bottom: 6px;
 }
 
 .show{
@@ -204,8 +208,8 @@ cursor: pointer;
 .film-sub {
   display: none;
     position: absolute;
-    top: 40px;
-    left: -55px;
+    top: 60px;
+    left: 340px;
     width: 650px;
     background: #fff;
     color: #000;
@@ -213,7 +217,7 @@ cursor: pointer;
     padding-right: 55px;
     overflow: scroll;
     height: 89vh;
-    padding-top: 30px;
+    padding-top: 45px;
     text-align: justify;
 
 }
@@ -299,8 +303,8 @@ left: 49.3%;
 .garten-sub {
   display: none;
   position: absolute;
-  top: 40px;
-  left: -140px;
+  top: 60px;
+  left: 340px;
   width: 650px;
   background: #fff;
   color: #000;
@@ -308,7 +312,7 @@ left: 49.3%;
   padding-right: 55px;
   overflow: scroll;
   height: 89vh;
-  padding-top: 30px;
+  padding-top: 45px;
   text-align: justify;
 }
 
@@ -319,8 +323,8 @@ left: 49.3%;
 .dorf-sub {
   display: none;
   position: absolute;
-  top: 40px;
-  left: -249px;
+  top: 60px;
+  left: 340px;
   width: 650px;
   background: #fff;
   color: #000;
@@ -328,7 +332,7 @@ left: 49.3%;
   padding-right: 55px;
   overflow: scroll;
   height: 89vh;
-  padding-top: 30px;
+  padding-top: 45px;
   text-align: justify;
 }
 
@@ -343,8 +347,8 @@ left: 49.3%;
 .info-sub {
   display: none;
   position: absolute;
-  top: 40px;
-  left: -522px;
+  top: 60px;
+  left: 340px;
   width: 650px;
   background: #fff;
   color: #000;
@@ -352,7 +356,7 @@ left: 49.3%;
   padding-right: 55px;
   overflow: scroll;
   height: 89vh;
-  padding-top: 30px;
+  padding-top: 45px;
   text-align: justify;
 }
 
@@ -362,4 +366,7 @@ left: 49.3%;
 
 .bold {
     font-weight: 900;
+}
+.whiteboxlinks{
+  color: black;
 }
