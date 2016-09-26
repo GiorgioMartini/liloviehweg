@@ -129,7 +129,7 @@ a:focus, a:hover {
     padding-left: 50px;
     color: #fff;
     padding-right: 123px;
-    /*padding-top: 1em;*/
+    text-decoration: none;
     padding-bottom: 1em;
 
 }
@@ -369,4 +369,14 @@ left: 49.3%;
 }
 .whiteboxlinks{
   color: black;
+}
+
+nav .nav-item-a-logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-item-a:hover {
+    color: #fff;
+    text-decoration: underline;
 }

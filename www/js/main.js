@@ -73,101 +73,6 @@ addMouseOvers(places);
 
 
 
-
-
-
-
-
-
-// if (  $(".garten-sub").hasClass("visible") || $(".dorf-sub").hasClass("visible") || $(".film-sub").hasClass("visible") || $(".info-sub").hasClass("visible") ) {
-//    $("nav-item-a-logo").addClass("active-logo");
-// }else{
-//   $("nav-item-a-logo").removeClass("active-logo");
-// }
-
-
-
-
-$('.film').on("click",function () {
-
-
-    if (  $('.film-sub').hasClass("visible") ) {
-      $(".nav-item-a-logo").removeClass("active-logo");
-      $('.film-sub').removeClass("visible");
-    }else{
-      $('.film-sub').addClass("visible");
-      $(".nav-item-a-logo").addClass("active-logo");
-    }
-
-    $('.garten-sub').removeClass("visible");
-    $('.dorf-sub').removeClass("visible");
-    $('.info-sub').removeClass("visible");
-
-  }
-);
-
-////////////////////////////
-$('.garten').on("click",function () {
-
-  if (  $('.garten-sub').hasClass("visible") ) {
-    $('.garten-sub').removeClass("visible");
-    $('.nav-item-a-logo').removeClass("active-logo");
-  }else{
-    $('.garten-sub').addClass("visible");
-    $('.nav-item-a-logo').addClass("active-logo");
-  }
-  $('.film-sub').removeClass("visible");
-  $('.dorf-sub').removeClass("visible");
-  $('.info-sub').removeClass("visible");
-  }
-);
-////////////////////////////
-$('.dorf').on("click",function () {
-  if (  $('.dorf-sub').hasClass("visible") ) {
-    $('.dorf-sub').removeClass("visible");
-    $('.nav-item-a-logo').removeClass("active-logo");
-  }else{
-    $('.dorf-sub').addClass("visible");
-    $('.nav-item-a-logo').addClass("active-logo");
-  }
-  $('.garten-sub').removeClass("visible");
-  $('.film-sub').removeClass("visible");
-  $('.info-sub').removeClass("visible");
-  }
-);
-////////////////////////////
-$('.info').on("click",function () {
-  if (  $('.info-sub').hasClass("visible") ) {
-    $('.info-sub').removeClass("visible");
-    $('.nav-item-a-logo').removeClass("active-logo");
-  }else{
-    $('.info-sub').addClass("visible");
-    $('.nav-item-a-logo').addClass("active-logo");
-  }
-  $('.garten-sub').removeClass("visible");
-  $('.dorf-sub').removeClass("visible");
-  $('.film-sub').removeClass("visible");
-  }
-);
-////////////////////////////
-$('.nav-item-a-logo').on("click",function () {
-  if (  $('.nav-item-a-logo').hasClass("active-logo") ) {
-    $('.nav-item-a-logo').removeClass("active-logo");
-    //$('.nav-item-a-logo').removeClass("active-logo");
-  }else{
-    $('.nav-item-a-logo').addClass("active-logo");
-
-  }
-  $('.garten-sub').removeClass("visible");
-  $('.dorf-sub').removeClass("visible");
-  $('.film-sub').removeClass("visible");
-  $('.info-sub').removeClass("visible");
-  }
-);
-
-
-
-
 $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
       $(".arrow").fadeOut();
@@ -260,60 +165,6 @@ $(".cafe").on("click",function(){
 
 });
 
-
-
-//////////////////////////////////////////////////////////////////
-$('.film-sub').on('click',function(){
-  if ($(".film-sub:not(.not-underlined)")) {
-    $('.film').addClass('not-underlined');
-  }
-});
-$('.film').on('click',function(){
-  if ( $(".film").hasClass('not-underlined')) {
-    $('.film').removeClass('not-underlined');
-  }
-});
-//////////////////////////
-$('.garten-sub').on('click',function(){
-  if ($(".garten-sub:not(.not-underlined)")) {
-    $('.garten').addClass('not-underlined');
-  }
-});
-$('.garten').on('click',function(){
-  if ( $(".garten").hasClass('not-underlined')) {
-    $('.garten').removeClass('not-underlined');
-  }
-});
-//////////////////////////
-$('.dorf-sub').on('click',function(){
-  if ($(".dorf-sub:not(.not-underlined)")) {
-    $('.dorf').addClass('not-underlined');
-  }
-});
-$('.dorf').on('click',function(){
-  if ( $(".dorf").hasClass('not-underlined')) {
-    $('.dorf').removeClass('not-underlined');
-  }
-});
-//////////////////////////
-$('.info-sub').on('click',function(){
-  if ($(".info-sub:not(.not-underlined)")) {
-    $('.info').addClass('not-underlined');
-  }
-});
-
-$('.info').on('click',function(){
-  if ( $(".info").hasClass('not-underlined')) {
-    $('.info').removeClass('not-underlined');
-  }
-});
-
-
-
-
-
-
-
 $(".lindenplatz").on("click",function(){
   $(".dorf-sub").addClass("visible");
 });
@@ -327,14 +178,84 @@ $(".lola").on("click",function(){
   $(".info-sub").addClass("visible");
 });
 
+
+
+
+
+//////////////////////////////////////////////////////
+$(".film").on("click",function(){
+  $(".film").css('text-decoration','none');
+  $(".film-sub").toggle('visible');
+
+    $(".garten").css('text-decoration','underline');
+    $(".dorf").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".garten-sub").css('display','none');
+    $(".dorf-sub").css('display','none');
+    $(".info-sub").css('display','none');
+
+
+});
+//////////////////////////////////////////////////////
+$(".garten").on("click",function(){
+  $(".garten").css('text-decoration','none');
+  $(".garten-sub").toggle('visible');
+
+    $(".film").css('text-decoration','underline');
+    $(".dorf").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+      $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none');
+    $(".dorf-sub").css('display','none');
+    $(".info-sub").css('display','none');
+});
+//////////////////////////////////////////////////////
+$(".dorf").on("click",function(){
+  $(".dorf").css('text-decoration','none');
+  $(".dorf-sub").toggle('visible');
+
+    $(".film").css('text-decoration','underline');
+    $(".garten").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none');
+    $(".garten-sub").css('display','none');
+    $(".info-sub").css('display','none');
+});
+//////////////////////////////////////////////////////
+$(".info").on("click",function(){
+  $(".info").css('text-decoration','none');
+  $(".info-sub").toggle('visible');
+
+    $(".film").css('text-decoration','underline');
+    $(".garten").css('text-decoration','underline');
+    $(".dorf").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none');
+    $(".garten-sub").css('display','none');
+    $(".dorf-sub").css('display','none');
+});
+//////////////////////////////////////////////////////
+$(".nav-item-a-logo").on("click",function(){
+  $(".nav-item-a-logo").css('text-decoration','none');
+
+    $(".film").css('text-decoration','underline');
+    $(".garten").css('text-decoration','underline');
+    $(".dorf").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none');
+    $(".garten-sub").css('display','none');
+    $(".dorf-sub").css('display','none');
+    $(".info-sub").css('display','none');
 });
 
-$(window).click(function() {
 
-  if (   $(".film-sub").hasClass('visible') ||  $(".garten-sub").hasClass('visible') ||   $(".dorf-sub").hasClass('visible') ||  $(".info-sub").hasClass('visible') ) {
-     $(".nav-item-a-logo").removeClass('active-logo').css('text-decoration','none');
-  }else if ( $(".film-sub").hasClass('visible') === false ||  $(".garten-sub").hasClass('visible') === false ||   $(".dorf-sub").hasClass('visible') === false ||  $(".info-sub").hasClass('visible') === false) {
-     $(".nav-item-a-logo").removeClass('active-logo').css('text-decoration','underline');
-  }
+
 
 });
