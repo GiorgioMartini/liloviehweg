@@ -184,8 +184,8 @@ $(".lola").on("click",function(){
 
 //////////////////////////////////////////////////////
 $(".film").on("click",function(){
-  $(".film").css('text-decoration','none');
-  $(".film-sub").toggle('visible');
+  //  $(".film").css('text-decoration','none');
+
 
     $(".garten").css('text-decoration','underline');
     $(".dorf").css('text-decoration','underline');
@@ -196,12 +196,22 @@ $(".film").on("click",function(){
     $(".dorf-sub").css('display','none');
     $(".info-sub").css('display','none');
 
+    $(".film-sub").toggle('visible');
+
+    if ( $(".film").css('text-decoration') === 'underline' ) {
+        $(".film").css('text-decoration','none');
+    }else if ($(".film").css('text-decoration') === 'none') {
+      $(".film").css('text-decoration','underline');
+    }
+
 
 });
+
+
 //////////////////////////////////////////////////////
 $(".garten").on("click",function(){
-  $(".garten").css('text-decoration','none');
-  $(".garten-sub").toggle('visible');
+  //$(".garten").css('text-decoration','none');
+
 
     $(".film").css('text-decoration','underline');
     $(".dorf").css('text-decoration','underline');
@@ -211,11 +221,22 @@ $(".garten").on("click",function(){
     $(".film-sub").css('display','none');
     $(".dorf-sub").css('display','none');
     $(".info-sub").css('display','none');
+
+    $(".garten-sub").toggle('visible');
+
+    if ( $(".garten").css('text-decoration') === 'underline' ) {
+        $(".garten").css('text-decoration','none');
+    }else if ($(".garten").css('text-decoration') === 'none') {
+      $(".garten").css('text-decoration','underline');
+    }
+
+
+
 });
 //////////////////////////////////////////////////////
 $(".dorf").on("click",function(){
-  $(".dorf").css('text-decoration','none');
-  $(".dorf-sub").toggle('visible');
+  //$(".dorf").css('text-decoration','none');
+
 
     $(".film").css('text-decoration','underline');
     $(".garten").css('text-decoration','underline');
@@ -225,11 +246,22 @@ $(".dorf").on("click",function(){
     $(".film-sub").css('display','none');
     $(".garten-sub").css('display','none');
     $(".info-sub").css('display','none');
+
+    $(".dorf-sub").toggle('visible');
+
+    if ( $(".dorf").css('text-decoration') === 'underline' ) {
+        $(".dorf").css('text-decoration','none');
+    }else if ($(".dorf").css('text-decoration') === 'none') {
+      $(".dorf").css('text-decoration','underline');
+    }
+
+
+
 });
 //////////////////////////////////////////////////////
 $(".info").on("click",function(){
-  $(".info").css('text-decoration','none');
-  $(".info-sub").toggle('visible');
+  //$(".info").css('text-decoration','none');
+
 
     $(".film").css('text-decoration','underline');
     $(".garten").css('text-decoration','underline');
@@ -239,6 +271,17 @@ $(".info").on("click",function(){
     $(".film-sub").css('display','none');
     $(".garten-sub").css('display','none');
     $(".dorf-sub").css('display','none');
+
+$(".info-sub").toggle('visible');
+
+    if ( $(".info").css('text-decoration') === 'underline' ) {
+        $(".info").css('text-decoration','none');
+    }else if ($(".info").css('text-decoration') === 'none') {
+      $(".info").css('text-decoration','underline');
+    }
+
+
+
 });
 //////////////////////////////////////////////////////
 $(".nav-item-a-logo").on("click",function(){
@@ -257,5 +300,11 @@ $(".nav-item-a-logo").on("click",function(){
 
 
 
+
+// $(window).on('click',function(){
+//   if ($(".film-sub").css('display') === 'none') {
+//     $(".film").css('text-decoration','underline');
+//   }
+// });
 
 });

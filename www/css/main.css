@@ -136,6 +136,11 @@ a:focus, a:hover {
 .underline{
   text-decoration: underline;
 }
+
+.not-underlined{
+  text-decoration: none;
+}
+
 .film-item-side{
 width: 100px;
 padding-top: 4em;
