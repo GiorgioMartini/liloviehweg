@@ -104,23 +104,10 @@ $(".menu-sub-item").on("click",function(){
 });
 
 
-$(".stutzpunkt").on("click",function(){
-  $(".dorf").addClass("not-underlined");
-  $(".dorf-sub").addClass("visible");
-});
 
 
-$(".lindenplatz").on("click",function(){
 
-  if ($(".dorf").hasClass("not-underlined") && $(".dorf-sub").hasClass("visible")) {
-    $(".dorf").removeClass("not-underlined");
-    $(".dorf-sub").removeClass("visible");
-  }else {
-    $(".dorf").addClass("not-underlined");
-    $(".dorf-sub").addClass("visible");
-  }
 
-});
 
 
 //DISABLE SCROLLING BG
@@ -153,30 +140,14 @@ $('.film-sub, .dorf-sub, .garten-sub, .info-sub').on('scroll', function() {
 
 
 
-$(".cafe").on("click",function(){
 
-  if ($(".dorf").hasClass("not-underlined") && $(".dorf-sub").hasClass("visible")) {
-    $(".dorf").removeClass("not-underlined");
-    $(".dorf-sub").removeClass("visible");
-  }else {
-    $(".dorf").addClass("not-underlined");
-    $(".dorf-sub").addClass("visible");
-  }
 
-});
+// $(".lindenplatz").on("click",function(){
+//   $(".dorf-sub").addClass("visible");
+// });
 
-$(".lindenplatz").on("click",function(){
-  $(".dorf-sub").addClass("visible");
-});
-$(".gar").on("click",function(){
-  $(".garten-sub").addClass("visible");
-});
-$(".gewachshaus").on("click",function(){
-  $(".garten-sub").addClass("visible");
-});
-$(".lola").on("click",function(){
-  $(".info-sub").addClass("visible");
-});
+
+
 
 
 
@@ -192,11 +163,11 @@ $(".film").on("click",function(){
     $(".info").css('text-decoration','underline');
     $(".nav-item-a-logo").css('text-decoration','underline');
 
-    $(".garten-sub").css('display','none');
-    $(".dorf-sub").css('display','none');
-    $(".info-sub").css('display','none');
+    $(".garten-sub").css('display','none').removeClass('visible');
+    $(".dorf-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
 
-    $(".film-sub").toggle('visible');
+    $(".film-sub").toggleClass('visible');
 
     if ( $(".film").css('text-decoration') === 'underline' ) {
         $(".film").css('text-decoration','none');
@@ -218,11 +189,11 @@ $(".garten").on("click",function(){
     $(".info").css('text-decoration','underline');
       $(".nav-item-a-logo").css('text-decoration','underline');
 
-    $(".film-sub").css('display','none');
-    $(".dorf-sub").css('display','none');
-    $(".info-sub").css('display','none');
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".dorf-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
 
-    $(".garten-sub").toggle('visible');
+    $(".garten-sub").toggleClass('visible');
 
     if ( $(".garten").css('text-decoration') === 'underline' ) {
         $(".garten").css('text-decoration','none');
@@ -237,27 +208,166 @@ $(".garten").on("click",function(){
 $(".dorf").on("click",function(){
   //$(".dorf").css('text-decoration','none');
 
-
     $(".film").css('text-decoration','underline');
     $(".garten").css('text-decoration','underline');
     $(".info").css('text-decoration','underline');
     $(".nav-item-a-logo").css('text-decoration','underline');
 
-    $(".film-sub").css('display','none');
-    $(".garten-sub").css('display','none');
-    $(".info-sub").css('display','none');
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".garten-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
 
-    $(".dorf-sub").toggle('visible');
+    $(".dorf-sub").toggleClass('visible');
 
     if ( $(".dorf").css('text-decoration') === 'underline' ) {
         $(".dorf").css('text-decoration','none');
     }else if ($(".dorf").css('text-decoration') === 'none') {
       $(".dorf").css('text-decoration','underline');
     }
-
-
-
 });
+
+
+
+$(".stutzpunkt").on("click",function(){
+
+    $(".film").css('text-decoration','underline');
+    $(".garten").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".garten-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
+
+    $(".dorf-sub").toggleClass('visible');
+
+    if ( $(".dorf").css('text-decoration') === 'underline' ) {
+        $(".dorf").css('text-decoration','none');
+    }else if ($(".dorf").css('text-decoration') === 'none') {
+      $(".dorf").css('text-decoration','underline');
+    }
+});
+// $(".lindenplatz").on("click",function(){
+//
+//   if ($(".dorf").hasClass("not-underlined") && $(".dorf-sub").hasClass("visible")) {
+//     $(".dorf").removeClass("not-underlined");
+//     $(".dorf-sub").removeClass("visible");
+//   }else {
+//     $(".dorf").addClass("not-underlined");
+//     $(".dorf-sub").addClass("visible");
+//   }
+//
+// });
+$(".lindenplatz").on("click",function(){
+
+    $(".film").css('text-decoration','underline');
+    $(".garten").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".garten-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
+
+    $(".dorf-sub").toggleClass('visible');
+    if ( $(".dorf").css('text-decoration') === 'underline' ) {
+        $(".dorf").css('text-decoration','none');
+    }else if ($(".dorf").css('text-decoration') === 'none') {
+      $(".dorf").css('text-decoration','underline');
+    }
+});
+// $(".gewachshaus").on("click",function(){
+//   $(".garten-sub").addClass("visible");
+// });
+$(".gewachshaus").on("click",function(){
+
+    $(".film").css('text-decoration','underline');
+    $(".dorf").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".dorf-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
+
+    $(".garten-sub").toggleClass('visible');
+
+    if ( $(".garten").css('text-decoration') === 'underline' ) {
+        $(".garten").css('text-decoration','none');
+    }else if ($(".garten").css('text-decoration') === 'none') {
+      $(".garten").css('text-decoration','underline');
+    }
+});
+
+// $(".lola").on("click",function(){
+//   $(".info-sub").addClass("visible");
+// });
+
+$(".lola").on("click",function(){
+
+    $(".film").css('text-decoration','underline');
+    $(".dorf").css('text-decoration','underline');
+    $(".garten").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".dorf-sub").css('display','none').removeClass('visible');
+    $(".garten-sub").css('display','none').removeClass('visible');
+
+    $(".info-sub").toggleClass('visible');
+
+    if ( $(".info").css('text-decoration') === 'underline' ) {
+        $(".info").css('text-decoration','none');
+    }else if ($(".info").css('text-decoration') === 'none') {
+      $(".info").css('text-decoration','underline');
+    }
+});
+// $(".gar").on("click",function(){
+//   $(".garten-sub").addClass("visible");
+// });
+
+$(".gar").on("click",function(){
+
+    $(".film").css('text-decoration','underline');
+    $(".dorf").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".dorf-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
+
+    $(".garten-sub").toggleClass('visible');
+
+    if ( $(".garten").css('text-decoration') === 'underline' ) {
+        $(".garten").css('text-decoration','none');
+    }else if ($(".garten").css('text-decoration') === 'none') {
+      $(".garten").css('text-decoration','underline');
+    }
+});
+
+
+$(".cafe").on("click",function(){
+
+    $(".film").css('text-decoration','underline');
+    $(".garten").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".garten-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
+
+    $(".dorf-sub").toggleClass('visible');
+
+    if ( $(".dorf").css('text-decoration') === 'underline' ) {
+        $(".dorf").css('text-decoration','none');
+    }else if ($(".dorf").css('text-decoration') === 'none') {
+      $(".dorf").css('text-decoration','underline');
+    }
+});
+
+
 //////////////////////////////////////////////////////
 $(".info").on("click",function(){
   //$(".info").css('text-decoration','none');
@@ -268,11 +378,11 @@ $(".info").on("click",function(){
     $(".dorf").css('text-decoration','underline');
     $(".nav-item-a-logo").css('text-decoration','underline');
 
-    $(".film-sub").css('display','none');
-    $(".garten-sub").css('display','none');
-    $(".dorf-sub").css('display','none');
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".garten-sub").css('display','none').removeClass('visible');
+    $(".dorf-sub").css('display','none').removeClass('visible');
 
-$(".info-sub").toggle('visible');
+$(".info-sub").toggleClass('visible');
 
     if ( $(".info").css('text-decoration') === 'underline' ) {
         $(".info").css('text-decoration','none');
@@ -292,10 +402,10 @@ $(".nav-item-a-logo").on("click",function(){
     $(".dorf").css('text-decoration','underline');
     $(".info").css('text-decoration','underline');
 
-    $(".film-sub").css('display','none');
-    $(".garten-sub").css('display','none');
-    $(".dorf-sub").css('display','none');
-    $(".info-sub").css('display','none');
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".garten-sub").css('display','none').removeClass('visible');
+    $(".dorf-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
 });
 
 
