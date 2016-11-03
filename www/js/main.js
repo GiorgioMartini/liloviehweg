@@ -358,13 +358,28 @@ $(".cafe").on("click",function(){
     $(".garten-sub").css('display','none').removeClass('visible');
     $(".info-sub").css('display','none').removeClass('visible');
 
-    $(".dorf-sub").toggleClass('visible');
+    //$(".dorf-sub").toggleClass('visible');
+    window.open('http://ayumisaito.com/zumlowen');
 
-    if ( $(".dorf").css('text-decoration') === 'underline' ) {
-        $(".dorf").css('text-decoration','none');
-    }else if ($(".dorf").css('text-decoration') === 'none') {
-      $(".dorf").css('text-decoration','underline');
-    }
+
+});
+
+$(".gluundspaene").on("click",function(){
+
+    $(".film").css('text-decoration','underline');
+    $(".garten").css('text-decoration','underline');
+    $(".info").css('text-decoration','underline');
+    $(".nav-item-a-logo").css('text-decoration','underline');
+    $(".dorf").css('text-decoration','underline');
+
+    $(".film-sub").css('display','none').removeClass('visible');
+    $(".garten-sub").css('display','none').removeClass('visible');
+    $(".info-sub").css('display','none').removeClass('visible');
+    $(".dorf-sub").css('display','none').removeClass('visible');
+
+    window.open('http://glutundspaene.de');
+
+
 });
 
 
